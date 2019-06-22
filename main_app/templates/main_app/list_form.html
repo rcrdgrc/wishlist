@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <title>Wish List</title>
+</head>
+<body>
+  <!-- Leaving the action empty makes the form post to the same url used to display it -->
+  <form action="" method="post">
+        <!-- Django requires the following for security purposes -->
+        {% csrf_token %}
+        <table>
+          <!-- Render the inputs inside of <tr>s & <td>s -->
+          {{ form.as_table }}
+        </table>
+        <input type="submit" value="Submit!" class="btn">
+      </form>
+</body>
+</html>
