@@ -1,4 +1,15 @@
 body {
     text-align: center;
     margin: 2rem;
+    color: red;
+}
+
+table {
+    margin: 2rem auto;
+    align-content: center;
+}
+
+table a {
+    color: red;
+    text-decoration: none;
 }
